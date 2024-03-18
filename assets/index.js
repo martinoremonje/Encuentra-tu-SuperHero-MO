@@ -34,7 +34,7 @@ $(document).ready(function(){
               };
                 console.log(res)
                 $('input').val("")
-                $(".image-div").html(`<div class="d-flex container-fluid"><div class="col-6">
+                $(".image-div").html(`<div class="row container-fluid"><div class="col-xl-6 col-sm-12">
                 <h3 class="px-2 text-center">SuperHero Encontrado</h3>
                 <div class="card mb-3" style="max-width: 600px;">
                 <div class="row g-0">
@@ -55,7 +55,10 @@ $(document).ready(function(){
                 </div>
                </div>
               </div>
-              <div id="chartContainer" style="height: 300px; width: 50%;"></div>`); $("#chartContainer").CanvasJSChart(options);
+              <div id="chartContainer" class="col-xl-6 col-sm-12" style="height: 300px; width: 50%;"></div>`); 
+              
+              $("#chartContainer").CanvasJSChart(options);
+              $('.card').addClass('animated-card');
             },
             error: function (err) {
                 console.log(err)
