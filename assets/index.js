@@ -1,3 +1,4 @@
+$(".siguiente").addClass("d-none");
 $(document).ready(function(){
    $('.btn-primary').on('click', function(event){
     event.preventDefault();
