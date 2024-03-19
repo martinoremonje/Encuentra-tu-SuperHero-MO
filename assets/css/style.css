@@ -18,7 +18,10 @@
 }
 @media (max-width: 890px) {
   .input-group{
-    width: 50vw;
+    width: 35vw;
+  }
+  #chartContainer{
+    display: none;
   }
 }
 
