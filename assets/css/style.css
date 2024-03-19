@@ -9,6 +9,15 @@
   
   .animated-card {
     animation-name: fadeIn;
-    animation-duration: 1s; /* o el tiempo que desees para la animación */
-    animation-fill-mode: both; /* Mantén los valores del último fotograma cuando la animación termine */
+    animation-duration: 1s; 
+    animation-fill-mode: both; 
   }
+
+.input-group{
+  width: 20vw;
+}
+@media (max-width: 890px) {
+  .input-group{
+    width: 50vw;
+  }
+}
