@@ -52,7 +52,7 @@ $(document).ready(function(){
                 <div class="card mb-3" style="max-width: 600px;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src="${res.image.url}" class="img-fluid rounded-start" alt="...">
+                    <img src="${res.image.url}" class="img-fluid rounded-start" alt="Hero/Villan IMG">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
@@ -88,6 +88,7 @@ $(document).ready(function(){
               }
               
               $('.card').addClass('animated-card');
+              $('h3').addClass('animated-card')
             },
             error: function (err) {
                 console.log(err)
@@ -150,7 +151,7 @@ $(document).ready(function(){
                   <div class="card mb-3" style="max-width: 600px;">
                   <div class="row g-0">
                     <div class="col-md-4">
-                      <img src="${res.results[0].image.url}" class="img-fluid rounded-start" alt="...">
+                      <img src="${res.results[0].image.url}" class="img-fluid rounded-start" alt="Hero/Villan IMG">
                     </div>
                     <div class="col-md-8">
                     <div class="card-body">
@@ -191,6 +192,7 @@ $(document).ready(function(){
                 }
                 
                 $('.card').addClass('animated-card');
+                $('h3').addClass('animated-card')
               } else{
                 alert("Nombre not found")
                 $('.input1').val("")
@@ -257,7 +259,7 @@ $(document).ready(function(){
                 <div class="card mb-3" style="max-width: 600px;">
                 <div class="row g-0">
                   <div class="col-md-4">
-                    <img src="${res.image.url}" class="img-fluid rounded-start" alt="...">
+                    <img src="${res.image.url}" class="img-fluid rounded-start" alt="Hero/Villan IMG">
                   </div>
                   <div class="col-md-8">
                     <div class="card-body">
@@ -293,7 +295,7 @@ $(document).ready(function(){
               }
               
               $('.card').addClass('animated-card');
-               
+              $('h3').addClass('animated-card')
             },
             error: function (err) {
                 console.log(err);
