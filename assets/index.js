@@ -57,7 +57,13 @@ $(document).ready(function(){
               </div>
               <div id="chartContainer" class="col-xl-6 col-sm-12" style="height: 300px; width: 50%;"></div>`); 
               
-              $("#chartContainer").CanvasJSChart(options);
+              if(res.powerstats.power == "null" && res.powerstats.combat == "null"){             
+                $("#chartContainer").html("<h2 class='text-center'>Stats Unknown</h2>");
+                $('#chartContainer').addClass('animated-card');
+              } else{
+                $("#chartContainer").CanvasJSChart(options);
+              }
+              
               $('.card').addClass('animated-card');
             },
             error: function (err) {
