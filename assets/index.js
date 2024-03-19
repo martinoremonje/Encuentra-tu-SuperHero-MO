@@ -166,7 +166,7 @@ $(document).ready(function(){
                   </div>
                 </div>
                     </div>
-                  </div>
+                  
                  </div>
                 </div>
                 <div id="chartContainer" class="col-xl-6 col-sm-12" style="height: 300px; width: 50%;"></div>`); 
