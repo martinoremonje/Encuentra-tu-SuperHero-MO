@@ -162,7 +162,7 @@ $(document).ready(function(){
                     <hr>
                     <p class="card-text"><small class="text-body-secondary">Peso: ${res.results[0].appearance.weight}</small></p>
                     <hr>
-                    <p class="card-text"><small class="text-body-secondary">Alianza: ${res.results[0].connections['group-affiliation']}</small></p>
+                    <p class="card-text"><small class="text-body-secondary">Alianza: ${res.results[0].connections.relatives}</small></p>
                     </div>
                     
                   </div>
@@ -171,7 +171,11 @@ $(document).ready(function(){
                   
                  </div>
                 </div>
-                <div id="chartContainer" class="col-xl-6 col-sm-12" style="height: 300px; width: 50%;"></div>`); 
+                
+                <div id="chartContainer" class="" style="height: 300px; width: 50%;">
+                
+                </div>`); 
+                
                 
                 if(res.results[0].powerstats.power == "null" && res.results[0].powerstats.combat == "null"){             
                   $("#chartContainer").html("<h2 class='text-center'>Stats Unknown</h2>");
