@@ -18,10 +18,16 @@
 }
 @media (max-width: 890px) {
   .input-group{
-    width: 35vw;
+    width: 55vw;
   }
   #chartContainer{
     display: none;
+  }
+  .logoName{
+    display: none;
+  }
+  .buscadorDiv{
+    padding: 0px 0px 0px 15px;
   }
 }
 
