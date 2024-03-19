@@ -19,15 +19,13 @@
 @media (max-width: 890px) {
   .input-group{
     width: 95vw;
+    padding: 0px 15px 0px 15px;
   }
   #chartContainer{
     display: none;
   }
   .logoName{
     display: none;
-  }
-  .buscadorDiv{
-    padding: 0px 15px 0px 15px;
   }
 }
 
