@@ -52,11 +52,21 @@ $(document).ready(function(){
                     <div class="card-body">
                       <h5 class="card-title">Nombre: ${res.name}</h5>
                       
-                      <p class="card-text">Conexiones: ${res.connections['group-affiliation']}</p>
+                      <h6 class="card-text">Conexiones: ${res.connections['group-affiliation']}</h6>
+                      <div class="py-4 px-4 cards-p">
                       <p class="card-text">Publisher: ${res.biography.publisher}</p>
                       <hr>
-                      <p class="card-text"><small class="text-body-secondary">Race: ${res.appearance.race}</small></p>
+                      <p class="card-text"><small class="text-body-secondary">Ocupacion: ${res.work.occupation}</small></p>
                       <hr>
+                      <p class="card-text"><small class="text-body-secondary">Primera aparicion: ${res.biography['first-appearance']}</small></p>
+                      <hr>
+                      <p class="card-text"><small class="text-body-secondary">Altura: ${res.appearance.height}</small></p>
+                      <hr>
+                      <p class="card-text"><small class="text-body-secondary">Peso: ${res.appearance.weight}</small></p>
+                      <hr>
+                      <p class="card-text"><small class="text-body-secondary">Alianza: ${res.connections.relatives}</small></p>
+                      </div>
+                      
                     </div>
                   </div>
                 </div>
@@ -135,15 +145,26 @@ $(document).ready(function(){
                       <img src="${res.results[0].image.url}" class="img-fluid rounded-start" alt="...">
                     </div>
                     <div class="col-md-8">
-                      <div class="card-body">
-                        <h5 class="card-title">Nombre: ${res.results[0].name}</h5>
-                        
-                        <p class="card-text">Conexiones: ${res.results[0].connections['group-affiliation']}</p>
-                        <p class="card-text">Publisher: ${res.results[0].biography.publisher}</p>
-                        <hr>
-                        <p class="card-text"><small class="text-body-secondary">Race: ${res.results[0].appearance.race}</small></p>
-                        <hr>
-                      </div>
+                    <div class="card-body">
+                    <h5 class="card-title">Nombre: ${res.results[0].name}</h5>
+                    
+                    <h6 class="card-text">Conexiones: ${res.results[0].connections['group-affiliation']}</h6>
+                    <div class="py-4 px-4 cards-p">
+                    <p class="card-text">Publisher: ${res.results[0].biography.publisher}</p>
+                    <hr>
+                    <p class="card-text"><small class="text-body-secondary">Ocupacion: ${res.results[0].work.occupation}</small></p>
+                    <hr>
+                    <p class="card-text"><small class="text-body-secondary">Primera aparicion: ${res.results[0].biography['first-appearance']}</small></p>
+                    <hr>
+                    <p class="card-text"><small class="text-body-secondary">Altura: ${res.results[0].appearance.height}</small></p>
+                    <hr>
+                    <p class="card-text"><small class="text-body-secondary">Peso: ${res.results[0].appearance.weight}</small></p>
+                    <hr>
+                    <p class="card-text"><small class="text-body-secondary">Alianza: ${res.results[0].connections['group-affiliation']}</small></p>
+                    </div>
+                    
+                  </div>
+                </div>
                     </div>
                   </div>
                  </div>

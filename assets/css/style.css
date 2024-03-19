@@ -21,3 +21,8 @@
     width: 50vw;
   }
 }
+
+.cards-p{
+  font-size: small;
+  padding: 25px 25px 25px 25px;
+}
