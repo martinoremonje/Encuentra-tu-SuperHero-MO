@@ -14,6 +14,8 @@ $(document).ready(function(){
                 tipoHeroe = "Villan"
               } else if(res.biography.alignment == "good"){
                 tipoHeroe = "Heroe"
+              } else{
+                tipoHeroe = "Hero/Villan"
               };
               var options = {
                 title: {
@@ -184,8 +186,8 @@ $(document).ready(function(){
                 $('.input1').val("")
               }
             },
-            error: function () {
-                alert("Nombre not found")
+            error: function (err) {
+                alert(err)
               }
         });
        
