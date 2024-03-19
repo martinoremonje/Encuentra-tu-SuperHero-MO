@@ -5,12 +5,13 @@ $(document).ready(function(){
     let regExp = /^-?\d+$/;
     $('.input2').data('current-id', inputUser)
     if(regExp.test(inputUser) && Number(inputUser) > 0 && Number(inputUser) < 733){
+
         $.ajax({
             type: "GET",
             url: `https://www.superheroapi.com/api.php/4905856019427443/${inputUser}`,
             dataType: "json",
             success: function(res){
-             
+              $(".siguiente").removeClass("d-none");
               let tipoHeroe = "";
               if(res.biography.alignment == "bad"){
                 tipoHeroe = "Villan"
@@ -298,7 +299,7 @@ $(document).ready(function(){
             }
         });
     } else{
-        alert("No hay Herores/Villanos seleccionados");
+        alert("Personajes no Encontrados");
     }
 });
   })
