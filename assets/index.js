@@ -1,5 +1,6 @@
 $(".siguiente").addClass("d-none");
 $(".atras").addClass("d-none");
+$(".idBtn").addClass("d-none");
 $(document).ready(function(){
    $('.btn-primary').on('click', function(event){
     event.preventDefault();
@@ -9,6 +10,7 @@ $(document).ready(function(){
     if(regExp.test(inputUser) && Number(inputUser) > 0 && Number(inputUser) < 733){
       $(".siguiente").removeClass("d-none");
       $(".atras").removeClass("d-none");
+      $(".idBtn").removeClass("d-none");
         $.ajax({
             type: "GET",
             url: `https://www.superheroapi.com/api.php/4905856019427443/${inputUser}`,
@@ -404,6 +406,10 @@ $(".atras").on("click", function(e){
       alert("Personajes no Encontrados");
   }
 });
+$(".idBtn").on("click", function(){
+  var currentId = parseInt($('.input2').data('current-id'), 10);
+  alert(`Esta es la ID: ${currentId}. La busqueda por nombre no genera ID, solo la busqueda por ID`)
+})
   })
 
 
