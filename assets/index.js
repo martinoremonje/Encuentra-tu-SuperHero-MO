@@ -1,6 +1,5 @@
 $(".siguiente").addClass("d-none");
 $(".atras").addClass("d-none");
-$(".idBtn").addClass("d-none");
 $(document).ready(function(){
    $('.btn-primary').on('click', function(event){
     event.preventDefault();
