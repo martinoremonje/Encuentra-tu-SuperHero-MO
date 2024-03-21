@@ -317,7 +317,7 @@ $(document).ready(function(){
             }
         });
     } else{
-        alert("Personajes no Encontrados");
+        alert("No hay personajes Siguientes");
     }
 });
 $(".atras").on("click", function(e){
@@ -414,7 +414,7 @@ $(".atras").on("click", function(e){
           }
       });
   } else{
-      alert("Personajes no Encontrados");
+      alert("No hay personajes Anteriores");
   }
 });
 
