@@ -2,14 +2,7 @@ $(".idBtn").addClass("d-none");
 $(".siguiente").addClass("d-none");
 $(".atras").addClass("d-none");
 $(document).ready(function(){
-  $(".idBtn").on("click", function(){
-    var currentId = parseInt($('.input2').data('current-id'), 10);
-    if(isNaN(currentId)){
-      alert('Aun no se agrega ID al database ↨')
-    } else{
-      alert(`Esta es la ID: ${currentId}.`)
-    };
-  })
+ 
    $('.btn-primary').on('click', function(event){
     event.preventDefault();
     let inputUser = $('.input2').val();
@@ -19,12 +12,13 @@ $(document).ready(function(){
       $(".idBtn").removeClass("d-none");
       $(".siguiente").removeClass("d-none");
       $(".atras").removeClass("d-none");
+      $(".idBtn").text(`${inputUser}`)
         $.ajax({
             type: "GET",
             url: `https://www.superheroapi.com/api.php/4905856019427443/${inputUser}`,
             dataType: "json",
             success: function(res){
-              $(".idBtn").text(`${res.id}`)
+              
               let tipoHeroe = "";
               if(res.biography.alignment == "bad"){
                 tipoHeroe = "Villan"
@@ -122,13 +116,14 @@ $(document).ready(function(){
             url: `https://www.superheroapi.com/api.php/4905856019427443/search/${heroName}`,
             dataType: "json",
             success: function(res){
-              $(".idBtn").text(`${res.results[0].id}`)
+              
               if(res.response != "error"){  
                 $(".idBtn").removeClass("d-none");
                 $(".siguiente").removeClass("d-none");
                 $(".atras").removeClass("d-none");
                 let nameId = res.results[0].id;
                 $('.input2').data('current-id', nameId);
+                $(".idBtn").text(`${res.results[0].id}`)
                 console.log(res)
                 let tipoHeroe = "";
                 if(res.results[0].biography.alignment == "bad"){
@@ -228,13 +223,15 @@ $(document).ready(function(){
     var currentId = parseInt($('.input2').data('current-id'), 10) + 1;
     console.log(currentId)
     if(currentId > 0 && currentId < 733){
+      $(".idBtn").text(`${currentId}`)
         $.ajax({
             type: "GET",
             url: `https://www.superheroapi.com/api.php/4905856019427443/${currentId}`,
             dataType: "json",
             success: function(res){
-              $(".idBtn").text(`${res.id}`)
+              
                 $('.input2').data('current-id', currentId);
+                
                 console.log(currentId)
               let tipoHeroe = "";
               if(res.biography.alignment == "bad"){
@@ -326,12 +323,12 @@ $(".atras").on("click", function(e){
   var currentId = parseInt($('.input2').data('current-id'), 10) - 1;
   console.log(currentId)
   if(currentId > 0 && currentId < 733){
+    $(".idBtn").text(`${currentId}`)
       $.ajax({
           type: "GET",
           url: `https://www.superheroapi.com/api.php/4905856019427443/${currentId}`,
           dataType: "json",
           success: function(res){
-            $(".idBtn").text(`${res.id}`)
               $('.input2').data('current-id', currentId);
               console.log(currentId)
             let tipoHeroe = "";
