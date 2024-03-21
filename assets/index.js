@@ -128,8 +128,7 @@ $(document).ready(function(){
                 $(".siguiente").removeClass("d-none");
                 $(".atras").removeClass("d-none");
                 let nameId = res.results[0].id;
-                $('.input2').data('current-id', nameId)           
-                $('.input2').val(`${res.results[0].id}`)
+                $('.input2').data('current-id', nameId);
                 console.log(res)
                 let tipoHeroe = "";
                 if(res.results[0].biography.alignment == "bad"){
