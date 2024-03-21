@@ -8,7 +8,7 @@ $(document).ready(function(){
       alert('Aun no se agrega ID al database ↨')
     } else{
       alert(`Esta es la ID: ${currentId}.`)
-    }
+    };
   })
    $('.btn-primary').on('click', function(event){
     event.preventDefault();
