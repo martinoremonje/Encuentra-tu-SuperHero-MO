@@ -24,7 +24,7 @@ $(document).ready(function(){
             url: `https://www.superheroapi.com/api.php/4905856019427443/${inputUser}`,
             dataType: "json",
             success: function(res){
-              
+              $(".idBtn").text(`${res.id}`)
               let tipoHeroe = "";
               if(res.biography.alignment == "bad"){
                 tipoHeroe = "Villan"
@@ -122,7 +122,7 @@ $(document).ready(function(){
             url: `https://www.superheroapi.com/api.php/4905856019427443/search/${heroName}`,
             dataType: "json",
             success: function(res){
-             
+              $(".idBtn").text(`${res.results[0].id}`)
               if(res.response != "error"){  
                 $(".idBtn").removeClass("d-none");
                 $(".siguiente").removeClass("d-none");
@@ -233,6 +233,7 @@ $(document).ready(function(){
             url: `https://www.superheroapi.com/api.php/4905856019427443/${currentId}`,
             dataType: "json",
             success: function(res){
+              $(".idBtn").text(`${res.id}`)
                 $('.input2').data('current-id', currentId);
                 console.log(currentId)
               let tipoHeroe = "";
@@ -330,6 +331,7 @@ $(".atras").on("click", function(e){
           url: `https://www.superheroapi.com/api.php/4905856019427443/${currentId}`,
           dataType: "json",
           success: function(res){
+            $(".idBtn").text(`${res.id}`)
               $('.input2').data('current-id', currentId);
               console.log(currentId)
             let tipoHeroe = "";
