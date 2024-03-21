@@ -205,7 +205,7 @@ $(document).ready(function(){
                 } else{
                   $("#chartContainer").CanvasJSChart(options);
                 }
-                
+                $('.input2').val("");
                 $('.card').addClass('animated-card');
                 $('h3').addClass('animated-card')
               } else{
