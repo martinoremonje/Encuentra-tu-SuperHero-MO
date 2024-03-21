@@ -1,15 +1,23 @@
 $(".siguiente").addClass("d-none");
 $(".atras").addClass("d-none");
 $(document).ready(function(){
+  $(".idBtn").on("click", function(){
+    var currentId = parseInt($('.input2').data('current-id'), 10);
+    if(currentId == "NaN"){
+      alert('Aun no se agrega ID al database')
+    } else{
+      alert(`Esta es la ID: ${currentId}.`)
+    }
+  })
    $('.btn-primary').on('click', function(event){
     event.preventDefault();
     let inputUser = $('.input2').val();
     let regExp = /^-?\d+$/;
     $('.input2').data('current-id', inputUser)
     if(regExp.test(inputUser) && Number(inputUser) > 0 && Number(inputUser) < 733){
+      
       $(".siguiente").removeClass("d-none");
       $(".atras").removeClass("d-none");
-      $(".idBtn").removeClass("d-none");
         $.ajax({
             type: "GET",
             url: `https://www.superheroapi.com/api.php/4905856019427443/${inputUser}`,
@@ -115,7 +123,10 @@ $(document).ready(function(){
             success: function(res){
              
               if(res.response != "error"){  
-                           
+                $(".siguiente").removeClass("d-none");
+                $(".atras").removeClass("d-none");
+                let nameId = res.results[0].id;
+                $('.input2').data('current-id', nameId)           
                 $('.input2').val(`${res.results[0].id}`)
                 console.log(res)
                 let tipoHeroe = "";
@@ -405,10 +416,7 @@ $(".atras").on("click", function(e){
       alert("Personajes no Encontrados");
   }
 });
-$(".idBtn").on("click", function(){
-  var currentId = parseInt($('.input2').data('current-id'), 10);
-  alert(`Esta es la ID: ${currentId}. La busqueda por nombre no genera ID, solo la busqueda por ID`)
-})
+
   })
 
 
