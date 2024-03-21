@@ -3,7 +3,7 @@ $(".atras").addClass("d-none");
 $(document).ready(function(){
   $(".idBtn").on("click", function(){
     var currentId = parseInt($('.input2').data('current-id'), 10);
-    if(currentId == "NaN"){
+    if(isNaN(currentId)){
       alert('Aun no se agrega ID al database')
     } else{
       alert(`Esta es la ID: ${currentId}.`)
