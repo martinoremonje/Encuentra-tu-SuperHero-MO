@@ -1,3 +1,4 @@
+$(".idBtn").addClass("d-none");
 $(".siguiente").addClass("d-none");
 $(".atras").addClass("d-none");
 $(document).ready(function(){
@@ -15,7 +16,7 @@ $(document).ready(function(){
     let regExp = /^-?\d+$/;
     $('.input2').data('current-id', inputUser)
     if(regExp.test(inputUser) && Number(inputUser) > 0 && Number(inputUser) < 733){
-      
+      $(".idBtn").removeClass("d-none");
       $(".siguiente").removeClass("d-none");
       $(".atras").removeClass("d-none");
         $.ajax({
@@ -123,6 +124,7 @@ $(document).ready(function(){
             success: function(res){
              
               if(res.response != "error"){  
+                $(".idBtn").removeClass("d-none");
                 $(".siguiente").removeClass("d-none");
                 $(".atras").removeClass("d-none");
                 let nameId = res.results[0].id;
